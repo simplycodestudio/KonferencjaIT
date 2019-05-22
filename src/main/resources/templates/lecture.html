@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+<h1 align="center">Konferencja IT</h1>
+<br/>
+<table border="1" cellpadding="10" align="center">
+    <tr>
+        <th>Java</th>
+        <th>Web</th>
+        <th>FrontEnd</th>
+    </tr>
+    <tr>
+
+    <tr th:each="lecture : ${lectures}">
+        <td th:text="${lecture.java}">java</td>
+        <td th:text="${lecture.web}">web</td>
+        <td th:text="${lecture.frontend}">frontend</td>
+    </tr>
+
+    </tr>
+
+
+
+</table>
+</body>
+</html>

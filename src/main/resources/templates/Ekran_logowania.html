@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:color="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+    <meta charset="UTF-8">
+
+</head>
+<!--
+<script>
+    function f() {
+
+    }
+</script>
+-->
+<body>
+
+  <div class="wrap">
+      <h2>Zaloguj się</h2>
+      <form method="get" action="/agenda">
+          <input type = "text" placeholder="Imię" required>
+          <input type = "text" placeholder="Email" required>
+          <input href="/lectures" type ="submit" value="zaloguj się">
+          <a href="/lectures">Wejdź jako gość</a>
+      </form>
+      <select  id="ddselect">
+
+          <option>-- Wybierz uczestnika --</option>
+          <option th:each="single_user : ${users_list}" th:text="${single_user}"></option>
+
+      </select>
+  </div>
+
+</body>
+</html>
